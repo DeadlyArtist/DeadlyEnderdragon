@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "deadlyenderdragon.mixin",
+  "plugin": "deadlyenderdragon.MixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "ChargingPlayerPhaseMixin",
+    "DragonFireballEntityMixin",
+    "EnderDragonEntityMixin",
+    "SittingFlamingPhaseMixin",
+    "StrafePlayerPhaseMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

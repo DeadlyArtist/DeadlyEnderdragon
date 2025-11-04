@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "deadlyenderdragon.neoforge.mixin",
+  "plugin": "deadlyenderdragon.neoforge.MixinPluginNeo",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

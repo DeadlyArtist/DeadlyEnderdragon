@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": $mod_authors,
+  "contact": {
+    "homepage": "${homepage}",
+    "sources": "${source}",
+    "issues": "${issues}"
+  },
+  "license": "${license}",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "deadlyenderdragon.fabric.ModEntryFabric"
+    ],
+    "client": [
+      "deadlyenderdragon.fabric.client.ExampleModFabricClient"
+    ]
+  },
+  "mixins": [
+    "deadlyenderdragon.mixins.json",
+    "deadlyenderdragon.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": $compatible_minecraft_versions,
+    "java": ">=${java_version}"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
