@@ -1,0 +1,102 @@
+accessWidener v2 named
+
+# HoeItem fix that doesn't work
+accessible field net/minecraft/item/MiningToolItem attackDamage F
+mutable field net/minecraft/item/MiningToolItem attackDamage F
+
+# Netherite spawn chance increase
+mutable field net/minecraft/world/gen/feature/OreFeatureConfig size I
+
+# ArmorItem
+accessible field net/minecraft/item/ArmorItem attributeModifiers Lcom/google/common/collect/Multimap;
+mutable field net/minecraft/item/ArmorItem attributeModifiers Lcom/google/common/collect/Multimap;
+accessible field net/minecraft/item/ArmorItem MODIFIERS Ljava/util/EnumMap;
+accessible field net/minecraft/item/ArmorItem protection I
+accessible field net/minecraft/item/ArmorItem toughness F
+
+# CrossbowItem
+accessible method net/minecraft/item/CrossbowItem shoot (Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;FZFFF)V
+accessible method net/minecraft/item/CrossbowItem getSoundPitch (ZLnet/minecraft/util/math/random/Random;)F
+
+# Tools
+accessible field net/minecraft/item/MiningToolItem attributeModifiers Lcom/google/common/collect/Multimap;
+accessible field net/minecraft/item/SwordItem attributeModifiers Lcom/google/common/collect/Multimap;
+accessible field net/minecraft/item/SwordItem attackDamage F
+
+# Item
+accessible field net/minecraft/item/Item foodComponent Lnet/minecraft/item/FoodComponent;
+mutable field net/minecraft/item/Item foodComponent Lnet/minecraft/item/FoodComponent;
+accessible field net/minecraft/item/Item ATTACK_DAMAGE_MODIFIER_ID Ljava/util/UUID;
+accessible field net/minecraft/item/Item ATTACK_SPEED_MODIFIER_ID Ljava/util/UUID;
+accessible field net/minecraft/item/Item maxCount I
+mutable field net/minecraft/item/Item maxCount I
+
+# ItemStack
+accessible field net/minecraft/item/ItemStack UNBREAKABLE_KEY Ljava/lang/String;
+accessible field net/minecraft/item/ItemStack REPAIR_COST_KEY Ljava/lang/String;
+accessible field net/minecraft/item/ItemStack CAN_DESTROY_KEY Ljava/lang/String;
+accessible field net/minecraft/item/ItemStack CAN_PLACE_ON_KEY Ljava/lang/String;
+accessible field net/minecraft/item/ItemStack HIDE_FLAGS_KEY Ljava/lang/String;
+accessible method net/minecraft/item/ItemStack isSectionVisible (ILnet/minecraft/item/ItemStack$TooltipSection;)Z
+
+# ItemRenderer
+accessible method net/minecraft/client/render/item/ItemRenderer renderBakedItemModel (Lnet/minecraft/client/render/model/BakedModel;Lnet/minecraft/item/ItemStack;IILnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;)V
+
+# RenderLayers
+accessible field net/minecraft/client/render/RenderLayers BLOCKS Ljava/util/Map;
+
+# Entity
+accessible field net/minecraft/entity/Entity random Lnet/minecraft/util/math/random/Random;
+accessible field net/minecraft/entity/Entity dimensions Lnet/minecraft/entity/EntityDimensions;
+
+# LivingEntity
+accessible field net/minecraft/entity/LivingEntity itemUseTimeLeft I
+accessible method net/minecraft/entity/LivingEntity shouldAlwaysDropXp ()Z
+accessible field net/minecraft/entity/LivingEntity playerHitTimer I
+
+# MobEntity
+accessible field net/minecraft/entity/mob/MobEntity experiencePoints I
+
+# Persistent Projectile Entity
+accessible field net/minecraft/entity/projectile/PersistentProjectileEntity life I
+accessible field net/minecraft/entity/projectile/PersistentProjectileEntity inGround Z
+
+# TridentEntity
+accessible field net/minecraft/entity/projectile/TridentEntity tridentStack Lnet/minecraft/item/ItemStack;
+accessible field net/minecraft/entity/projectile/TridentEntity LOYALTY Lnet/minecraft/entity/data/TrackedData;
+accessible field net/minecraft/entity/projectile/TridentEntity ENCHANTED Lnet/minecraft/entity/data/TrackedData;
+accessible method net/minecraft/entity/projectile/TridentEntity tryPickup (Lnet/minecraft/entity/player/PlayerEntity;)Z
+accessible field net/minecraft/entity/projectile/TridentEntity dealtDamage Z
+
+# FishingBobberEntity
+accessible class net/minecraft/entity/projectile/FishingBobberEntity$PositionType
+
+# SheepEntity
+accessible field net/minecraft/entity/passive/SheepEntity DROPS Ljava/util/Map;
+
+# ExperienceOrbEntity
+accessible field net/minecraft/entity/ExperienceOrbEntity amount I
+accessible field net/minecraft/entity/ExperienceOrbEntity pickingCount I
+
+# ExperienceOrbSpawnS2CPacket
+mutable field net/minecraft/network/packet/s2c/play/ExperienceOrbSpawnS2CPacket experience I
+accessible field net/minecraft/network/packet/s2c/play/ExperienceOrbSpawnS2CPacket experience I
+
+# AttributeContainer
+accessible field net/minecraft/entity/attribute/AttributeContainer custom Ljava/util/Map;
+
+# Enchantment Helper
+accessible method net/minecraft/enchantment/EnchantmentHelper forEachEnchantment (Lnet/minecraft/enchantment/EnchantmentHelper$Consumer;Lnet/minecraft/item/ItemStack;)V
+accessible method net/minecraft/enchantment/EnchantmentHelper forEachEnchantment (Lnet/minecraft/enchantment/EnchantmentHelper$Consumer;Ljava/lang/Iterable;)V
+accessible class net/minecraft/enchantment/EnchantmentHelper$Consumer
+
+# StatusEffect
+accessible method net/minecraft/entity/effect/StatusEffect <init> (Lnet/minecraft/entity/effect/StatusEffectCategory;I)V
+
+# StrafePlayerPhase
+accessible field net/minecraft/entity/boss/dragon/phase/StrafePlayerPhase path Lnet/minecraft/entity/ai/pathing/Path;
+
+# RecipeManager
+accessible field net/minecraft/recipe/RecipeManager recipes Ljava/util/Map;
+accessible field net/minecraft/recipe/RecipeManager recipesById Ljava/util/Map;
+accessible method net/minecraft/recipe/RecipeManager getAllOfType (Lnet/minecraft/recipe/RecipeType;)Ljava/util/Map;
